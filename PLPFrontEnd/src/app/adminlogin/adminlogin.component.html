@@ -1,0 +1,30 @@
+
+    <div class="jumbotron">
+           
+        <h1 style="text-align: center">Welcome to CapStore</h1>
+        <div class="container">
+         
+            <h2 class="text text-primary text-center"><b> Admin Login</b></h2>
+            <form class="col-sm-4 container-fluid">
+            <div class="form-group">
+            <label>adminId</label>
+            <input type="text" class="form-control" placeholder="adminId" #admin Id required >
+            </div>
+             
+            <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Password"  #password required >
+            </div>
+             
+            <div class="form-group">
+            <input type="submit" (click)="login(username.value,password.value)" class="btn btn-primary btn-block" value="Login" routerLink="/loginComponent" >
+            </div>
+        
+              <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+              </div>
+           </form>
+            
+        </div>
+        </div>
+        <router-outlet></router-outlet>

@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    DETAILS
+ </nav>
+ <div class="card" style="width: 55em;margin: 5%;">
+ <form class="container-fluid" style="padding: 4px;">
+     <div class="form-group">
+         <input type="text" class="form-control" name="cardno" aria-describedby="Help" id="cardno" placeholder="Card Number">
+         <small id="Help" class="form-text text-muted">This card will be securely saved for a faster payment experience.</small>
+     </div>
+     <div class="form-group">
+         <label for="expiry">Expiry</label>
+         <input type="month" class="form-control" id="expiry" placeholder="MM">
+     </div>
+     <div class="form-group">
+         <input type="text" class="form-control" id="cvv" placeholder="CVV" aria-describedby="help">
+         <small id="help" class="form-text text-muted">CVV number will not be saved.</small>
+     </div>
+ </form>
+ <button type="button" class="btn  btn-success" id="placeOrder"style="width:15em;margin:2%;" (click)="placeOrder()">PLACE ORDER</button>
+ </div>

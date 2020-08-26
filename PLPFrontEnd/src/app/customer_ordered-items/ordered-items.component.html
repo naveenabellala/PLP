@@ -1,0 +1,55 @@
+<div class="nav navbar" style="background-color: black">
+    <h2 style="color: white"> </h2>
+    <div style="text-align: center">
+
+        <h2 style="color: white">DashBoard</h2>
+    </div>
+    <ul class="nav navbar-nav">
+
+        <li>
+            <button type="button" class="btn btn-raised btn-primary" routerLink="/dashboardc" routerLinkActive="active">
+                Back to DashBoard </button>
+        </li>
+    </ul>
+</div>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th> #</th>
+            <th> Order Id</th>
+
+            <th> Order Time</th>
+            <th>Price</th>
+            <th> Shipping Address</th>
+            <th> Quantity</th>
+            <th> Order Status</th>
+            <th> Return Order</th>
+            <th> Feedback</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let items of orderedItemsList; let i = index">
+            <td> {{i+1}}</td>
+            <td> {{items.ordId}}</td>
+
+            <td> {{items.orderTime}}</td>
+            <td> {{items.ordPrice}}</td>
+            <td> {{items.shippingAddress}}</td>
+            <td> {{items.ordQty}}</td>
+            <td> {{items.ordStatus}}</td>
+
+
+
+            <td> <button href="#" (click)="returnProduct(items.ordId)">Return</button> </td>
+            <td><button type="button" class="btn btn-raised btn-primary" routerLink="/mail"
+                    routerLinkActive="active">Customer Email Service</button></td>
+
+
+
+
+        </tr>
+    </tbody>
+</table>

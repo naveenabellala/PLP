@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    PAYMENT OPTIONS
+ </nav>
+<div class="optionwrapper" style="padding: 10px; margin-left: 20px;">
+<div class="row" id="row2">
+    <div class="col-md-4" id="wallets">
+        <input type="radio" name="paymentoption" value="wallets" (click)="toggle()">&nbsp; Wallets
+        <div class="paymentwrapper" id="options" *ngIf="show">
+            <div class="row" id="phonep"><input style="margin-top: 3px;" type="radio" name="walletopt" value="WL"  (click)="enable()" (change)="paymentMode($event)">&nbsp; &nbsp;<img src="/assets/pp.png" height="20px" width="20px">&nbsp; &nbsp;PHONEPE</div>
+            <div class="row" id="bhim"><input style="margin-top: 3px;" type="radio" name="walletopt" value="WL"  (click)="enable()" (change)="paymentMode($event)">&nbsp; &nbsp;<img src="/assets/bhim.png" height="20px" width="20px">&nbsp; &nbsp;BHIM UPI</div>
+            <div class="row" id="paytm"><input style="margin-top: 3px;" type="radio" name="walletopt" value="WL" (click)="enable()" (change)="paymentMode($event)">&nbsp; &nbsp;<img src="/assets/py.jpg" height="20px" width="20px">&nbsp; &nbsp;PAYTM</div>
+            <div class="row" id="gpay"><input style="margin-top: 3px;" type="radio" name="walletopt" value="WL"  (click)="enable()" (change)="paymentMode($event)">&nbsp; &nbsp;<img src="/assets/gpay.png" height="20px" width="20px">&nbsp; &nbsp;GOOGLE PAY</div>
+        </div>
+    </div>
+</div>
+<div class="row" id="row3">
+    <div class="col-md-4" id="cards">
+        <input type="radio" name="paymentoption"  value="WL"  (click)="enable()" (change)="paymentMode($event)">&nbsp;Credit/Debit/ATM Card
+    </div>
+</div>
+<div class="row" id="row4">
+    <div class="col-md-4" id="netbanking">
+        <input type="radio" name="paymentoption" value="WL"  (click)="enable()" (change)="paymentMode($event)">&nbsp;Net Banking
+    </div>
+</div>
+<div class="row" id="row5">
+    <div class="col-md-4" id="emi">
+        <input type="radio" name="paymentoption" value="WL" (click)="enable()" (change)="paymentMode($event)">&nbsp;EMI(Easy Installments)
+    </div>
+</div>
+<div class="row" id="row6">
+    <div class="col-md-4" id="cod">
+        <input type="radio" name="paymentoption" value="COD" (click)="enabled()" (change)="paymentMode($event)">&nbsp;Cash On Delivery
+    </div>
+</div>
+<div class="row" id="row7">
+    <div class="col-md-1" id="button">
+        <button type="button" class="btn  btn-success" id="continue" *ngIf="true" disabled="disabled" (click)="enterCardDetails(false)">CONTINUE</button>
+    </div>
+    <div class="col-md-2" id="button">
+        <button type="button" class="btn btn-success" id="place"   disabled="disabled" (click)="enterCardDetails(true)">PLACE ORDER</button>
+    </div>
+</div>
+</div>

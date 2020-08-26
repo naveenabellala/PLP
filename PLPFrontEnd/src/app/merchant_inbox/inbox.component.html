@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-sm-2">
+    <div id="viewport">
+      <div id="sidebar">
+        <header>
+          <a>Welcome</a>
+        </header>
+        <ul class="nav">
+          <li>
+            <a [routerLink]="['/dashboard']">
+              <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewCustomers']" routerLinkActive="active">
+              <i class="zmdi zmdi-link"></i> My Customers
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewInventory']">
+              <i class="zmdi zmdi-widgets"></i> My Inventory
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/additem']">
+              <i class="zmdi zmdi-calendar"></i> Add Item
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/checkorders']">
+              <i class="zmdi zmdi-calendar"></i> Check Orders
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/mail']">
+              <i class="zmdi zmdi-calendar"></i> My Mail Box
+            </a>
+          </li>
+
+         
+          <li>
+              <a [routerLink]="['/welcome']">
+                <i class="zmdi zmdi-calendar"></i>Logout
+              </a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+<h1 style="text-align: center">Inbox</h1>
+<table class="table" style="margin-top: 30px; width:80%" align="center">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let arr of array">
+        <th scope="row">{{arr.id}}</th>
+        <td>{{arr.fromMailId}}</td>
+        <td>{{arr.toMailId}}</td>
+        <td>{{arr.mail}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

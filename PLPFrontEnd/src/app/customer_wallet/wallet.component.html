@@ -1,0 +1,40 @@
+<div class="nav navbar" style="background-color: black" >
+    <h2 style="color: white"></h2>
+    <div style="text-align: center">
+
+            <h2 style="color: white">DashBoard</h2>
+            </div>
+    <ul class="nav navbar-nav">
+        
+        <li>
+                <button type="button" class="btn btn-raised btn-primary" routerLink="/dashboardc" routerLinkActive="active"> Back to DashBoard </button>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    
+    <br><br>
+    <div class="row" style="min-height: 300px;">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4"> 
+                <div class="card" style="width: 18rem;">
+                     
+                    <div class="card-body">
+                          <h5 class="card-title">Wallet</h5>
+                          <b> <label style="font-family: 'Times New Roman', Times, serif" >  {{balance}}   </label> </b>
+
+                          <p class="card-text" style="font-style: italic"> Add amount here to avoid last minute hassles </p>
+                          <input type="text" #EnteredAmount > <br>
+                          <br>
+                          <button href="#" class="btn btn-primary" (click)='deposit(EnteredAmount.value)'>Deposit</button> &nbsp;
+                          <button href="#" class="btn btn-primary" (click)='checkBalance()'>Check Balance</button>
+                        </div>
+                      </div>
+        </div>
+        
+    </div>
+
+   
+</div>
+

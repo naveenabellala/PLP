@@ -1,0 +1,156 @@
+<body>
+    <h1 style="text-align: center">Product Page</h1>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">Home</a> >
+                <a href="/">Product</a> >
+                <a href="#">Product Page</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="carouselExampleControls" data-ride="carousel">
+                   
+                        <div class="carousel-item active"> <img class="d-block w-100"
+                                src="https://bit.ly/2TQqaXr">
+                        </div>
+                       
+
+                </div>
+            </div>
+            <div class="col-md-6" *ngIf="product">
+                <div class="row">
+                    <h2>{{product.prodName}}</h2>
+                </div>
+                <div class="row">
+                    <h1><i class="fa fa-inr"></i>{{product.price}}</h1>
+                    &nbsp; &nbsp;
+
+                    <h2 class="text-success">{{product.discount}} % off</h2><br>
+              
+                </div>
+
+                <div class="md-form input-group mb-4">
+                    <input type="text" class="form-control" placeholder="Enter Coupon Code" id=coupon #couponCode>
+                    <!-- <div class="input-group-append">
+                        <button> <span class="input-group-text md-addon" id="material-addon2">Apply</span></button>
+                    </div> -->
+                </div>
+
+                <div class="row mt-4">
+                    <h4>Promocode: &nbsp; &nbsp;</h4>
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Select Promocode </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">{{product.promoCode}}</a>
+                            <a class="dropdown-item" href="#">2nd </a>
+                            <a class="dropdown-item" href="#">3rd</a>
+                        </div>
+                    </div>&nbsp;
+                    <br>
+                    <input type="number" placeholder="Qty" id="qty" min="0" #qty>
+                </div>
+
+
+
+                <div class="row mt-4">
+
+                   <button type="btn" class="btn btn-primary" (click)="buyNow(qty.value,couponCode.value,product)"> Buy Now</button> &nbsp;
+                    <button type="btn btn-default" class="btn btn-primary" (click)='addToCart(product)'> Add To Cart </button> &nbsp;
+                    <a  routerLink="/wishlist"> Add To WishList</a> 
+                </div>
+                <div class="row mt-4">
+                    <h4>Merchant: &nbsp; &nbsp;</h4>
+                    <p style="font-size: 18px">{{product.merchant.firstName}}</p>
+                </div>
+                <div class="row mt-4">
+                    <h4>Product Views: &nbsp; <i class="fa fa-eye"></i>&nbsp; </h4>
+                    <h3 style="font-size: 10px"> {{product.viewsCount}}</h3>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row mt-5">
+            <h2>Similar Products</h2>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top img-fluid"
+                        src="https://bit.ly/2TQqaXr">
+                    <div class="card-title">
+                        <h4>GYM Tops</h4>
+                    </div>
+                    <div class="card-text">
+
+                        <a class="btn btn-success "> Buy Now</a> &nbsp; <a class="btn btn-danger "><i
+                                class="fa fa-cart-plus"></i> Add To
+                            Cart</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top img-fluid"
+                        src="https://bit.ly/2TQqaXr">
+                    <div class="card-title">
+                        <h4>GYM Tops</h4>
+                    </div>
+                    <div class="card-text">
+
+                        <a class="btn btn-success "> Buy Now</a> &nbsp; <a class="btn btn-danger "><i
+                                class="fa fa-cart-plus"></i> Add To
+                            Cart</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top " src="https://bit.ly/2TQqaXr">
+                    <div class="card-title">
+                        <h4>GYM Tops</h4>
+                    </div>
+                    <div class="card-text">
+
+                        <a class="btn btn-success "> Buy Now</a> &nbsp; <a class="btn btn-danger "><i
+                                class="fa fa-cart-plus"></i> Add To
+                            Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top img-fluid"
+                        src="https://bit.ly/2TQqaXr">
+                    <div class="card-title">
+                        <h4>GYM Tops</h4>
+                    </div>
+                    <div class="card-text">
+
+                        <a class="btn btn-success "> Buy Now</a> &nbsp; <a class="btn btn-danger "><i
+                                class="fa fa-cart-plus"></i> Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>

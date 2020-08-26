@@ -1,0 +1,103 @@
+<div class="row">
+  <div class="col-sm-2">
+    <div id="viewport">
+      <div id="sidebar">
+        <header>
+          <a>Welcome</a>
+        </header>
+        <ul class="nav">
+          <li>
+            <a [routerLink]="['/dashboard']">
+              <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewCustomers']" routerLinkActive="active">
+              <i class="zmdi zmdi-link"></i> My Customers
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewInventory']">
+              <i class="zmdi zmdi-widgets"></i> My Inventory
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/additem']">
+              <i class="zmdi zmdi-calendar"></i> Add Item
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/checkorders']">
+              <i class="zmdi zmdi-calendar"></i> Check Orders
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/mail']">
+              <i class="zmdi zmdi-calendar"></i> My Mail Box
+            </a>
+          </li>
+
+       
+          <li>
+              <a [routerLink]="['/welcome']">
+                <i class="zmdi zmdi-calendar"></i>Logout
+              </a>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewport">
+    <div class="jumbotron text-center">
+      <span class="display-4" style="color: gray">CapCom Store</span>
+    </div>
+
+    <div class="container">
+      <div class="text-center">
+        <h3>My Inventory</h3>
+      </div>
+    </div><br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+          <table class="table table-striped" style="font-size: 16px">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Views</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of merchantProducts, let i = index">
+                <td> {{ i + 1 }} </td>
+                <td #pid> {{ item.prodId }} </td>
+                <td #pname> {{ item.prodName }} </td>
+                <td #pcategory> {{ item.prodCategory }} </td>
+                <td #price> {{ item.price }} </td>
+                <td #pdiscount> {{ item.discount }} </td>
+                <td #pviews> {{ item.viewsCount }} </td>
+                <td #qty> {{ item.qty }}</td>
+                <td><button type="button" class="btn btn-warning" (click)="updateProduct(item)">Update</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+  </div>
+</div>

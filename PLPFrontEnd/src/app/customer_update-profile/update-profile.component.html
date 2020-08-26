@@ -1,0 +1,60 @@
+<div class="nav navbar" style="background-color: black" >
+    <h2 style="color: white"> </h2>
+    <div style="text-align: center">
+
+            <h2 style="color: white">DashBoard</h2>
+            </div>
+    <ul class="nav navbar-nav">
+        
+        <li>
+                <button type="button" class="btn btn-raised btn-primary" routerLink="/dashboardc" routerLinkActive="active"> Back to DashBoard </button>
+        </li>
+    </ul>
+</div>
+
+
+
+<form action="" method="POST" role="form">
+    <legend>Update Profile </legend>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-6" id="main">
+                
+                 <div class="form-group form-inline">
+                    <label for="">First Name</label> &nbsp; &nbsp;
+                    <input type="text" class="form-control" id="" placeholder="To be first name" #firstName>
+                    </div>
+                 <div class="form-group form-inline">
+                    <label for="">Last Name</label>&nbsp; &nbsp;
+                    <input type="text" class="form-control" id="" placeholder="To be Last name " #lastName> 
+                 </div>
+                    <div class="form-group form-inline">
+                    <label for="">Address</label> &nbsp; &nbsp; &nbsp;&nbsp;
+                    <input type="text" class="form-control" id="" placeholder="To be new Address" #address>
+                 </div>
+                    <div class="form-group form-inline">
+                    <label for="">Phone No</label> &nbsp; &nbsp;
+                    <input type="text" class="form-control" id="" placeholder="New Phone no" #phoneNo>
+                 </div>
+                
+                    <button type="submit" class="btn btn-primary" (click)='saveAttributes(firstName.value,lastName.value,address.value,phoneNo.value)' > Update Details</button>
+                
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+        </div>
+    </div>
+
+    
+
+
+</form>
+
+
+
+

@@ -1,0 +1,30 @@
+*{
+    overflow: hidden;
+}
+nav{
+    padding:15px;
+}
+#row1{
+    height:50px;
+}
+.optionwrapper{
+    margin-top:25px; 
+    padding: 10px;
+}
+.paymentwrapper{
+    padding: 20px;
+}
+.optionwrapper .col-md-4{
+    padding: 8px;
+}
+/* #wallets
+{
+    border-bottom:solid #cccccc 1px;
+    border-radius: 5px;
+} */
+#row2{
+    border-bottom: 1px solid white;
+}
+#options{
+    padding:20px;
+}

@@ -1,0 +1,159 @@
+<div class="header">
+
+    <div class="container">
+
+        <div class="logo">
+            <h1><a routerLinkActive='active' [routerLink]="['/homepage']"><b>T<br>H<br>E</b>CapStore<span>Market on your
+                        Hands!</span></a></h1>
+        </div>
+        <div class="head-t">
+            <ul class="card">
+                <li><a routerLinkActive='active' [routerLink]="['/aboutus']"><i class="fa fa-info"
+                            aria-hidden="true"></i>About Us</a></li>
+                <li><a routerLinkActive='active' [routerLink]="['/deals']"><i class="fa fa-tags"
+                            aria-hidden="true"></i>Deals & Offer</a></li>
+                <li><a routerLinkActive='active' [routerLink]="['/profile']"><i class="fa fa-user"
+                            aria-hidden="true"></i>Profile</a></li>
+                <li><a routerLinkActive='active' [routerLink]="['/logout']"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i>Logout</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="nav-top">
+            <nav class="navbar navbar-default">
+
+                <div class="navbar-header nav_2">
+                    <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
+                        data-target="#bs-megadropdown-tabs">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+
+                </div>
+                <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                    <ul class="nav navbar-nav ">
+                        <li class="active"><a class="hyper"><span>Sort By</span></a></li>
+
+                        <li><a class="hyper" (click)='sortByViews()'><span>Popularity</span></a>
+                        </li>
+
+                        <li><a class="hyper" (click)='sortByLowToHigh()'><span>Price--Low to
+                                    High</span></a></li>
+
+                        <li><a class="hyper" (click)='sortByHighToLow()'><span>Price--High
+                                    to Low</span></a></li>
+
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Price Range<b
+                                        class="caret"></b></span></a>
+                            <ul class="dropdown-menu multi">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <ul class="multi-column-dropdown">
+
+                                            <!--Price Range -->
+                                            <p>Min value: <input type="number" [(ngModel)]="minValue" #low></p>
+                                            <p>Max value: <input type="number" [(ngModel)]="maxValue" #high></p>
+                                            <ng5-slider [(value)]="minValue" [(highValue)]="maxValue"
+                                                [options]="options" (click)="sortByRange(low.value,high.value)">
+                                            </ng5-slider>
+                                            <li class="product_sorting_btn" (click)="sortByRange(low.value,high.value)">
+                                                Price Range</li>
+
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="col-sm-3 w3l">
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="btn-group" style="float: right;">
+                <button type="button" class="btn btn-success" (click)='allProductClicked()'>All Flipkart
+                    Products</button>
+                <button type="button" class="btn btn-success" (click)='thirdPartyClicked()'>Third Party Product</button>
+            </div>
+            <br><br>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>
+<!---->
+<div class="component1">
+
+</div>
+
+<!-- <div *ngIf="status; then thenBlock else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <app-all-products></app-all-products>
+</ng-template>
+<ng-template #elseBlock>
+    <app-third-party-products></app-third-party-products>
+</ng-template> -->
+
+
+<div [ngSwitch]="status">
+    <div *ngSwitchCase="'allProd'">
+        <app-all-products></app-all-products>
+    </div>
+    <div *ngSwitchCase="'thirdProd'">
+        <app-third-party-products></app-third-party-products>
+    </div>
+    <div *ngSwitchCase="'priceRangeProd'">
+        <app-sort-by-price-range></app-sort-by-price-range>
+    </div>
+    
+    <div *ngSwitchCase="'highToLowProd'">
+        
+        <app-sort-high-to-low></app-sort-high-to-low>
+    </div>
+    <div *ngSwitchCase="'lowToHighProd'">
+       
+        <app-sort-low-to-high></app-sort-low-to-high>
+    </div>
+    <div *ngSwitchCase="'viewsProd'">
+       
+            <app-sort-by-views></app-sort-by-views>
+        </div>
+</div>
+
+
+
+
+
+
+
+<!--footer-->
+<div class="footer">
+
+    <div class="copy-right">
+        <p> &copy; 2019 CapStore. All Rights Reserved | <span><img src="../../assets/ecomm/images/visamaster.jpg"
+                    height="30" width="55" style="border-radius: 5px;"> &nbsp; <img
+                    src="../../assets/ecomm/images/rupay.png" height="30" width="55" style="border-radius: 5px;">
+                &nbsp; <img src="../../assets/ecomm/images/PhonePe.jpg" height="30" width="55"
+                    style="border-radius: 5px;"> &nbsp; <img src="../../assets/ecomm/images/googlepay.jpg" height="30"
+                    width="55" style="border-radius: 5px;"></span>
+        </p>
+    </div>
+
+</div>
+<!-- //footer-->

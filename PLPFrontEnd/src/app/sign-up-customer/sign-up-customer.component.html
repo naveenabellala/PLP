@@ -1,0 +1,93 @@
+<!-- Material Design for Bootstrap fonts and icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+<!-- Material Design for Bootstrap CSS -->
+<link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+
+<div class="header">
+
+    <div class="jumbotron">
+
+        <div class="logo">
+            <h1><a routerLinkActive='active' [routerLink]="['/homepage']"><b>T<br>H<br>E</b>CapStore<span>Market on your
+                        Hands!</span></a></h1>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-8" ><br><br><br>
+            <h1 style="text-align: center; color: green"><b>Customer Signup</b></h1>
+            <br>
+            <form class="form" >
+                <div class="form-group">
+                    <label for="exampleInputName1" class="bmd-label-floating" style="font-size: 15px; color: black">First Name <b class="asterik">*</b></label>
+                    <input type="text" class="form-control" id="exampleInputName1" #fname required style="font-size: 15px">
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName2" class="bmd-label-floating" style="font-size: 15px; color: black">Last Name <b class="asterik">*</b></label>
+                    <input type="text" class="form-control" id="exampleInputName2" #lname required style="font-size: 15px">
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="bmd-label-floating" style="font-size: 15px; color: black">Email address <b class="asterik">*</b></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" #email required style="font-size: 15px">
+                    <span class="bmd-help">We'll never share your email with anyone else.</span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputNumber1" class="bmd-label-floating" style="font-size: 15px; color: black">phone Number <b class="asterik">*</b> </label>
+                    <input type="text" class="form-control" id="exampleInputNumber1" #phone required style="font-size: 15px">
+
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="bmd-label-floating" style="font-size: 15px; color: black">Password <b class="asterik">*</b></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" #password required style="font-size: 15px">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword2" class="bmd-label-floating" style="font-size: 15px; color: black"> Confirm Password <b class="asterik">*</b></label>
+                    <input type="password" class="form-control" id="exampleInputPassword2"  #confirmPassword required style="font-size: 15px">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputAdress" class="bmd-label-floating" style="font-size: 15px; color: black"> Address <b class="asterik">*</b></label>
+                    <br>
+                    <textarea class="form-control" rows="5" id="exampleInputTextArea" #address style="font-size: 15px"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName3" class="bmd-label-floating" style="font-size: 15px; color: black">Wallet Balance <b class="asterik">*</b></label>
+                    <input type="number" class="form-control" id="exampleInputName3" #bal required style="font-size: 15px">
+
+                </div>
+                <br><br>
+                <button type="button" class="btn btn-success btn-raised" style="font-size: 15px; padding: 10px;" 
+                    (click)="addCustomer(fname.value,lname.value,email.value,password.value,confirmPassword.value,address.value,phone.value,bal.value)">Sign
+                    Up</button>
+            </form>
+
+
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>

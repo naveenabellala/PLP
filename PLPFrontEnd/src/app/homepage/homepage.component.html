@@ -1,0 +1,331 @@
+
+
+
+
+<div class="header">
+
+    <div class="container">
+
+        <div class="logo">
+            <h1><a routerLinkActive='active' [routerLink]="['/homepage']"><b>T<br>H<br>E</b>CapStore<span>Market on your
+                        Hands!</span></a></h1>
+        </div>
+        <div class="head-t">
+            <ul  id="set">
+                <li><a routerLinkActive='active' [routerLink]="['/products']"><i class="fa fa-info"
+                            aria-hidden="true"></i>About Us</a></li>
+                <li><a routerLinkActive='active' [routerLink]="['/deals']"><i class="fa fa-tags"
+                            aria-hidden="true"></i>All Products</a></li>
+                <li><a routerLinkActive='active' [routerLink]="['/dashboardc']"><i class="fa fa-user"
+                            aria-hidden="true"></i>Profile</a></li>
+                <li><a routerLinkActive='active' [routerLink]="['/logout']"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i>Logout</a></li>
+            </ul>
+        </div> 
+
+
+
+
+        <div class="nav-top">
+            <nav class="navbar navbar-default">
+
+                <div class="navbar-header nav_2">
+                    <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
+                        data-target="#bs-megadropdown-tabs">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+
+                </div>
+                
+                <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                    <ul class="nav navbar-nav " id="sets">
+                        <li class=" active"><a routerLinkActive='active' [routerLink]="['/homepage']"
+                                class="hyper "><span>Home</span></a></li>
+
+                        <li class="dropdown ">
+                            <a href="" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Categories<b
+                                        class="caret"></b></span></a>
+                            <ul class="dropdown-menu multi">
+                                <div class="row">
+                                    <div class="col-sm-3" *ngFor="let category of uniqueItems;">
+                                        <ul class="multi-column-dropdown">
+
+                                            <li><a href=""><i class="fa fa-angle-right"
+                                                        aria-hidden="true"></i>{{category}}</a></li>
+
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="col-sm-3 w3l">
+                                       
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown"><span> New Arrivals <b
+                                        class="caret"></b></span></a>
+                            <ul class="dropdown-menu multi multi1">
+                                <div class="row">
+                                    <div class="col-sm-3" *ngFor="let product of Products; index as i">
+                                        <ul class="multi-column-dropdown" *ngIf="i<7">
+
+                                            <li><a href=""><i class="fa fa-angle-right"
+                                                        aria-hidden="true"></i>{{product.prodName}}</a></li>
+
+
+                                        </ul>
+
+                                    </div>
+                                    
+                                    <div class="col-sm-3 w3l">
+                                        <button type="button" class="btn btn-sm btn-warning" routerLinkActive='active' [routerLink]="['/products']">View all</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </nav>
+            <!-- <div class="cart">
+
+                <span class="fa fa-shopping-cart my-cart-icon"><span
+                        class="badge badge-notify my-cart-badge">0</span></span>
+            </div> -->
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>
+<!---->
+
+<div class="container-fluid ban">
+    <div class="banner-info">
+        <h3>I'm looking for </h3>
+        <div class="search-form">
+            <form>
+                <input type="text" placeholder="Search..." name="Search...">
+                <input type="submit" value=" ">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!--content-->
+<div class="content-top ">
+    <div class="container ">
+        <div class="spec ">
+            <h3>Special Offers</h3>
+            <div class="ser-t">
+                <b></b>
+                <span><i></i></span>
+                <b class="line"></b>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!--content-->
+
+<!--content-->
+<!-- Carousel
+    ================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a > <img class="first-slide" src="../../assets/ecomm/images/banner1.png"
+                    alt="First slide"></a>
+
+                    
+        </div>
+        <div class="item">
+            <a > <img class="second-slide " src="../../assets/ecomm/images/banner2.png"
+                    alt="Second slide"></a>
+
+        </div>
+        <div class="item">
+            <a ><img class="third-slide " src="../../assets/ecomm/images/banner3.png" alt="Third slide"></a>
+
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div><!-- /.carousel -->
+
+<!-- <div class="table table-stripped">
+        <thead>
+            <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Product Price</th>
+            <th>Product Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of Products">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.productCategory}}</td>
+                <td>{{product.productPrice}}</td>
+                <td>{{product.productRating}}</td>
+            </tr>
+        </tbody>
+    
+    </div> -->
+
+
+<!--content-->
+<div class="product">
+    <div class="container">
+        <div class="spec ">
+            <h3>New Arrivals</h3>
+            <div class="ser-t">
+                <b></b>
+                <span><i></i></span>
+                <b class="line"></b>
+            </div>
+        </div>
+        <div class="con-w3l" *ngFor="let product of Products; index as i">
+            <div class="col-md-3 pro-1" *ngIf="i<12">
+                <div class="col-m">
+                    <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
+                        <img src="" class="img-responsive" alt="">
+                    </a>
+                    <div class="mid-1">
+                        <div class="women">
+                            <h6><a href="">{{product.prodName}}</a></h6>
+                        </div>
+                        <div class="mid-2">
+                            <p><em class="item_price">Rs. {{product.price}}</em></p><br>
+                            <p style="color:red; font-size: 15px"><em class="item_price">{{product.discount}}% Off</em></p>
+                            <div class="block">
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="add add-2">
+                            <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="see-more display-4">
+       
+          <button type="button" class="btn btn-md btn-success" routerLinkActive='active' [routerLink]="['/products']">
+              See All Products
+          </button>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <div class="col-md-3 footer-grid">
+            <h3>About Us</h3>
+            <p>CapStore: The One-stop Shopping Destination
+                E-commerce is revolutionizing the way we all shop in India. CapStore houses everything you can possibly
+                imagine,
+                from trending electronics accessories to
+                modern appliances , we got them all covered. </p>
+        </div>
+        <div class="col-md-3 footer-grid ">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Kitchen</a></li>
+                <li><a href="">Personal Care</a></li>
+                <li><a href="">Fashion Trends</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 footer-grid ">
+            <h3>Mail Us:</h3>
+            <ul>
+                <p>
+                    CapStore Private Limited,<br>
+                    ITPL Road, EPIP Zone, Whitefield,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India.<br>
+                    Mail to : <a href="mailto:capstore@capgemini.com" style="color: honeydew">capstore@capgemini.com</a>
+                </p>
+
+            </ul>
+        </div>
+        <div class="col-md-3 footer-grid">
+            <h3>Registered Office Address:</h3>
+            <ul>
+                <p>
+                    CapStore Private Limited,<br>
+                    ITPL Road, EPIP Zone, Whitefield,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India.<br>
+                    CIN : A12345BC6789DEF012345
+                    Telephone: 1800 123 4564
+                </p>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div class="footer-bottom">
+            <h2><a href=""><b>T<br>H<br>E</b>CapStore<span>Market on your Hands!</span></a></h2>
+            <p class="fo-para">An E-commerce application where you can shop and buy anything. Market is on your hands.
+            </p>
+
+
+        </div>
+        <div class="copy-right">
+            <p> &copy; 2019 CapStore. All Rights Reserved | <span><img src="../../assets/ecomm/images/visamaster.jpg"
+                        height="30" width="55" style="border-radius: 5px;"> &nbsp; <img
+                        src="../../assets/ecomm/images/rupay.png" height="30" width="55" style="border-radius: 5px;">
+                    &nbsp; <img src="../../assets/ecomm/images/PhonePe.jpg" height="30" width="55"
+                        style="border-radius: 5px;"> &nbsp; <img src="../../assets/ecomm/images/googlepay.jpg"
+                        height="30" width="55" style="border-radius: 5px;"></span>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- //footer-->

@@ -1,0 +1,22 @@
+<h1 style="text-align: center">SentBox</h1>
+<table class="table" style="margin-top: 30px;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let arr of array" >
+        <th scope="row">{{arr.id}}</th>
+        <td>{{arr.fromMailId}}</td>
+        <td>{{arr.toMailId}}</td>
+        <td>{{arr.mail}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  

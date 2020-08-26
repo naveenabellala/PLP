@@ -1,0 +1,70 @@
+
+
+<div class="nav navbar" style="background-color: black" >
+    <h2 style="color: white"></h2>
+    <div style="text-align: center">
+
+            <h2 style="color: white">DashBoard</h2>
+            </div>
+    <ul class="nav navbar-nav">
+        
+        <li>
+                <button type="button" class="btn btn-raised btn-primary" routerLink="/updateProfile" routerLinkActive="active" (click)="profileAttributes()"> Update Profile </button>
+        </li>
+    </ul>
+</div>
+
+
+<div class="container">
+    
+    <br><br>
+    <div class="row" style="min-height: 300px;">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4"> 
+                <div class="card" style="width: 18rem;">
+                     
+                    <div class="card-body">
+                          <h5 class="card-title">Wishlist</h5>
+                          <p class="card-text" style="font-style: italic"> Items that you'll love to have</p>
+                          <button routerLink="/wishlist" class="btn btn-primary">Go</button>
+                        </div>
+                      </div>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4"> 
+                <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Ordered Items</h5>
+                          <p class="card-text" style="font-style: italic"> Items on which you loved spending.</p>
+                          
+                          <button class="btn btn-primary" routerLinkActive="active" (click)="getOrderedItems()">Go</button>
+                        </div>
+                      </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Wallet</h5>
+                          <p class="card-text" style="font-style: italic"> Your very own wallet</p>
+                          <button href="#" class="btn btn-primary" routerLink="/wallet" routerLinkActive="active">Go</button>
+                        </div>
+                      </div>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Cart</h5>
+                          <p class="card-text" style="font-style: italic"> Let us delivery your item now</p>
+                          <button href="#" class="btn btn-primary" routerLink="/cartItems" routerLinkActive="active" >Go</button>
+                          
+                        </div>
+                      </div>
+        </div>
+    </div>
+
+</div>

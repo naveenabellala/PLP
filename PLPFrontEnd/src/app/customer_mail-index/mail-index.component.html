@@ -1,0 +1,28 @@
+<div style="margin-top: 30px; margin-left: 20px;">
+    <button type="submit" class="btn btn-primary btn-raised" routerLink="/inbox" >Inbox</button>&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary btn-raised" routerLink="/sent">Sent Mails</button>
+</div>
+
+<div>
+<form class="col-md-4 col-md-offset-4">
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="bmd-label-floating">From:</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" #fromMailId required>
+      <span class="bmd-help">Enter Your email</span>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="bmd-label-floating">To:</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" #toMailId  required>
+      <span class="bmd-help">Enter Recipent email</span>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleTextarea" class="bmd-label-floating">Message:</label>
+      <textarea class="form-control" id="exampleTextarea" rows="3" #mail required></textarea>
+    </div>
+
+    
+  </form>
+  
+</div>
+<button type="submit" class="btn btn-primary btn-raised" (click)="sendMail(fromMailId.value,toMailId.value,mail.value)">Send Mail</button>

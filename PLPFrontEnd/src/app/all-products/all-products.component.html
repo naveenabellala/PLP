@@ -1,0 +1,40 @@
+<div class="product">
+    <div class="container">
+        <div class="spec ">
+            <h3>All Products</h3>
+            <div class="ser-t">
+                <b></b>
+                <span><i></i></span>
+                <b class="line"></b>
+            </div>
+        </div>
+        <div class="con-w3l" *ngFor="let product of Products;">
+            <div class="col-md-3 pro-1">
+                <div class="col-m">
+                    <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
+                        <img src="" class="img-responsive" alt="">
+                    </a>
+                    <div class="mid-1">
+                        <div class="women">
+                            <h6><a href="">{{product.prodName}}</a></h6>
+                        </div>
+                        <div class="mid-2">
+                            <p><em class="item_price">Rs. {{product.price}}</em></p><br>
+                            <p style="color:red; font-size: 15px"><em class="item_price">{{product.discount}}% Off</em></p>
+                            <div class="block">
+                                
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="add add-2">
+                            <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</div>

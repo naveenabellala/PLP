@@ -1,0 +1,39 @@
+<div class="nav navbar" style="background-color: black">
+    <h2 style="color: white"></h2>
+    <div style="text-align: center">
+
+        <h2 style="color: white">DashBoard</h2>
+    </div>
+    <ul class="nav navbar-nav">
+
+        <li>
+            <button type="button" class="btn btn-raised btn-primary" routerLink="/dashboardc" routerLinkActive="active">
+                Back to DashBoard </button>
+        </li>
+    </ul>
+</div>
+<br><br>
+<div>
+    <table class="table" style="width:60%" align="center">
+        <thead>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Add to Cart</th>
+            <th>Delete from Wishlist</th>
+        </thead>
+        <tbody *ngFor="let wish of wishlist">
+            <tr>
+                <td>{{wish.wishedProduct.prodName}}</td>
+                <td>{{wish.wishedProduct.price}}</td>
+                <td align="center">
+                    <button type="button" class="btn btn-success" (click)="addToCart(wish)">Add To
+                        Cart</button></td>
+                <td align="center">
+                    <button type="button" class="btn
+                                                    btn-danger" (click)="deleteFromCart(wish.wishId)">Remove </button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

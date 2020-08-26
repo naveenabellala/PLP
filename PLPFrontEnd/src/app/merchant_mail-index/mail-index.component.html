@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="col-sm-2">
+    <div id="viewport">
+      <div id="sidebar">
+        <header>
+          <a>Welcome</a>
+        </header>
+        <ul class="nav">
+          <li>
+            <a [routerLink]="['/dashboard']">
+              <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewCustomers']" routerLinkActive="active">
+              <i class="zmdi zmdi-link"></i> My Customers
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewInventory']">
+              <i class="zmdi zmdi-widgets"></i> My Inventory
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/additem']">
+              <i class="zmdi zmdi-calendar"></i> Add Item
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/checkorders']">
+              <i class="zmdi zmdi-calendar"></i> Check Orders
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/mail']">
+              <i class="zmdi zmdi-calendar"></i> My Mail Box
+            </a>
+          </li>
+
+          <li>
+              <a [routerLink]="['/welcome']">
+                <i class="zmdi zmdi-calendar"></i>Logout
+              </a>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="margin-top: 30px; margin-left: 20px;">
+      <button type="submit" class="btn btn-primary btn-raised" routerLink="/inbox">Inbox</button>&nbsp;&nbsp;&nbsp;
+      <button type="submit" class="btn btn-primary btn-raised" routerLink="/sent">Sent Mails</button>
+    </div>
+
+    <div>
+      <form class="col-md-4 col-md-offset-4">
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="bmd-label-floating">From:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" #fromMailId required>
+          <span class="bmd-help">Enter Your email</span>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1" class="bmd-label-floating">To:</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" #toMailId required>
+          <span class="bmd-help">Enter Recipent email</span>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleTextarea" class="bmd-label-floating">Message:</label>
+          <textarea class="form-control" id="exampleTextarea" rows="3" #mail required></textarea>
+        </div>
+
+
+      </form>
+
+    </div>
+    <button type="submit" class="btn btn-success btn-raised"
+      (click)="sendMail(fromMailId.value,toMailId.value,mail.value)">Send Mail</button>
+  </div>
+</div>

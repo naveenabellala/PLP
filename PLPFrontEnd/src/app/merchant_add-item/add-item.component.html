@@ -1,0 +1,101 @@
+
+<div class="row">
+    <div class="col-sm-2">
+      <div id="viewport">
+        <div id="sidebar">
+          <header>
+            <a>Welcome</a>
+          </header>
+          <ul class="nav">
+            <li>
+              <a [routerLink]="['/dashboard']">
+                <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/viewCustomers']" routerLinkActive="active">
+                <i class="zmdi zmdi-link"></i> My Customers
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/viewInventory']">
+                <i class="zmdi zmdi-widgets"></i> My Inventory
+              </a>
+            </li>
+  
+            <li>
+              <a [routerLink]="['/additem']">
+                <i class="zmdi zmdi-calendar"></i> Add Item
+              </a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/checkorders']">
+                <i class="zmdi zmdi-calendar"></i> Check Orders
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/mail']">
+                <i class="zmdi zmdi-calendar"></i> My Mail Box
+              </a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/welcome']">
+                <i class="zmdi zmdi-calendar"></i>Logout
+              </a>
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </div>
+<br><br>
+<div class="container">
+    <br><br>
+    <h2 style="text-align: center;">Add a Product</h2>
+    <div style="margin-left:20%">
+        <form style="width:80%">
+            <div class="form-group">
+                <label for="ProductName">Product Name</label>
+                <input type="text" class="form-control" #name placeholder="Product Name">
+            </div>
+            <div class="form-group">
+                <label for="ProductPrice">Price</label>
+                <input type="number" class="form-control" #price placeholder="Product Price">
+            </div>
+            <div class="form-group">
+                <label>Choose Category</label> </div>
+                <div class="form-group">
+
+                    <select class="form-control" #category>
+                        <option>LAPTOP</option>
+                        <option>MOBILE</option>
+                        <option>TV</option>
+                        <option>HOME APPLIANCES</option>
+                    </select>
+                </div>
+           
+            <div class="form-group">
+                <label for="ProductDiscount">Discount</label>
+                <input type="number" #discount class="form-control" id="prodDiscount" placeholder="Product Discount in %">
+            </div>
+            <div class="form-group">
+                <label for="ProductDiscount">Valid Time</label>
+                <input type="number" class="form-control" #time
+                     placeholder="Valid Time of Discount in Days">
+            </div>
+            <div class="form-group">
+                <label for="ProductQty">Quantity</label>
+                <input type="number" class="form-control" #quantity placeholder="Product Quantity" value="1">
+            </div>
+            <div class="form-group">
+                <label for="ProductDiscount">Promo Codes</label>
+                <input type="text" class="form-control" #promo 
+                    placeholder="Promo Codes Separated by a Space">
+            </div>
+        </form>
+        <button type="button" class="btn btn-primary" (click)=addProduct(name.value,price.value,category.value,discount.value,time.value,quantity.value,promo.value)>Add Product !</button>
+    </div>
+</div>
+</div>

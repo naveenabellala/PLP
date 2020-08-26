@@ -1,0 +1,40 @@
+
+    <div class="card" style="width: 60rem;">
+    
+    <div class="card-body">
+        
+<div>
+        <body>
+                <h1 align="center">Invoice generation</h1>
+                <h3 align="left">Order details</h3>
+                <table *ngIf = "dataList">
+                    <tr>
+                        <td>ordrerId:</td>
+                        <td>{{dataList.ordId}}</td>
+                    </tr>
+                    <tr>
+                        <td>productId:</td>
+                        <td>{{ dataList.product.prodId}}</td>
+                    </tr>
+                    <tr>
+                            <td>orderTime:</td>
+                            <td>{{dataList.orderTime}}</td>
+                        </tr>
+                        <tr>
+                                <td>orderprice:</td>
+                                <td>{{dataList.ordPrice}}</td>
+                            </tr>
+                            <h3>AddressDetails</h3>
+                            <tr>
+                                    
+                                <td>ShippingAddress:</td>
+                                <td>{{dataList.shippingAddress}}</td>
+                            </tr>
+                </table>
+               
+                
+                    </body>
+</div>
+    </div>
+  </div>
+ 

@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<div class="nav navbar" style="background-color: rgb(48, 130, 236)">
+
+    <div>
+        <h2 style="color: white">My Cart</h2>
+    </div>
+    <ul class="nav navbar-nav">
+        <li>
+            <button type="button" class="btn btn-raised btn-primary" routerLink="/dashboard" routerLinkActive="active">
+                Back to Dashboard</button>
+        </li>
+    </ul>
+</div>
+<br><br>
+<div class="row">
+    <!-- <div class="col-sm-8"> -->
+        <table class="table table-hover" style="width:60%" align="center">
+            <thead>
+                <th>Products Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Remove from Cart</th>
+            </thead>
+            <tbody *ngFor="let cart of cartlist">
+                <tr>
+                    <td>{{cart.cartProduct.prodName}}</td>
+                    <td>{{cart.cartProduct.price}}</td>
+                    <td>{{cart.qty}}</td>
+                    <td align="center"><button type="button" class="btn btn-warning"
+                            (click)="deleteFromCart(cart.cartId)">Remove </button></td>
+                </tr>
+            </tbody>
+            <input type="submit" class="btn btn-warning" value="Place order">
+        </table>
+    <!-- </div> -->
+
+    
+        
+    
+    <!-- <div class="col-sm-4">
+        <h3>Price details</h3>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <td>Total Payable for selected products</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Amount: {{amount}}</b></td>
+                </tr>
+                <tr>
+                    <td align="right"><input type="submit" class="btn btn-warning" value="Place order"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+</div>

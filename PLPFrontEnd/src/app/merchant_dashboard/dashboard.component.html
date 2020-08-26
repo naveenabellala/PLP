@@ -1,0 +1,110 @@
+
+<div class="row">
+  <div class="col-sm-2">
+    <div id="viewport">
+      <div id="sidebar">
+        <header>
+          <a>Welcome</a>
+        </header>
+        <ul class="nav">
+          <li>
+            <a [routerLink]="['/dashboard']">
+              <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewCustomers']" routerLinkActive="active">
+              <i class="zmdi zmdi-link"></i> My Customers
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewInventory']">
+              <i class="zmdi zmdi-widgets"></i> My Inventory
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/additem']">
+              <i class="zmdi zmdi-calendar"></i> Add Item
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/checkorders']">
+              <i class="zmdi zmdi-calendar"></i> Check Orders
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/mail']">
+              <i class="zmdi zmdi-calendar"></i> My Mail Box
+            </a>
+          </li>
+
+          <li>
+              <a [routerLink]="['/welcome']">
+                <i class="zmdi zmdi-calendar"></i>Logout
+              </a>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="viewport">
+    <div class="jumbotron text-center" >
+      <span class="display-4" style="color: gray">CapCom Store</span>
+    </div>
+    
+
+    <div class="container" style="margin-top:-1%">
+      <div class="text-center"><h3><i><u>Your Details</u></i></h3><br></div>
+      <table class="table" style="width:50%; font-size: 18px" align="center" *ngIf="merchant">
+        <tr>
+          <td>Name of Merchant</td>
+          <td>{{merchant.firstName}}&nbsp;{{merchant.lastName}}</td>
+        </tr>
+
+        <tr>
+          <td>Merchant ID</td>
+          <td>{{merchant.merId}}</td>
+        </tr>
+
+        <tr>
+          <td>Email ID</td>
+          <td>{{merchant.emailId}}</td>
+        </tr>
+
+        <tr>
+          <td>Pan Card</td>
+          <td>{{merchant.panCard}}</td>
+        </tr>
+
+        <tr>
+          <td>Address</td>
+          <td>{{merchant.address}}</td>
+        </tr>
+
+
+        <tr>
+          <td>Phone Number</td>
+          <td>{{merchant.phoneNo}}</td>
+        </tr>
+
+        <tr>
+          <td>Type of Merchant</td>
+          <td>{{merchant.merType}}</td>
+        </tr>
+
+        <tr>
+          <td>Merchant Rating</td>
+          <td>5</td>
+        </tr>
+
+
+
+
+      </table>
+    </div>
+  </div>
+</div>

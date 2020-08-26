@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-sm-2">
+    <div id="viewport">
+      <div id="sidebar">
+        <header>
+          <a>Welcome</a>
+        </header>
+        <ul class="nav">
+          <li>
+            <a [routerLink]="['/dashboard']">
+              <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewCustomers']" routerLinkActive="active">
+              <i class="zmdi zmdi-link"></i> My Customers
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/viewInventory']">
+              <i class="zmdi zmdi-widgets"></i> My Inventory
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/additem']">
+              <i class="zmdi zmdi-calendar"></i> Add Item
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/checkorders']">
+              <i class="zmdi zmdi-calendar"></i> Check Orders
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/mail']">
+              <i class="zmdi zmdi-calendar"></i> My Mail Box
+            </a>
+          </li>
+
+         
+          <li>
+              <a [routerLink]="['/welcome']">
+                <i class="zmdi zmdi-calendar"></i>Logout
+              </a>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="viewport">
+    <div class="jumbotron text-center">
+      <span class="display-4" style="color: gray">CapCom Store</span>
+    </div>
+
+    <div class="container">
+      <div class="text-center">
+        <h3>My Customers</h3>
+      </div>
+    </div><br>
+
+    <table class="table text-center" align="center" style="width:70%;font-size: 16px">
+      <thead>
+        <th>#</th>
+        <th>Customer ID</th>
+        <th>Customer Name</th>
+        <th>Email</th>
+        <th>Ph. Number</th>
+      </thead>
+      <tbody *ngFor="let customer of customers; index as i">
+        <tr>
+          <td>{{i+1}}</td>
+          <td>{{customer.custId}}</td>
+          <td>{{customer.firstName}}&nbsp;{{customer.lastName}}</td>
+          <td>{{customer.emailId}}</td>
+          <td>{{customer.phoneNo}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

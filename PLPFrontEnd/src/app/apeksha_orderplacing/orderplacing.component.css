@@ -1,0 +1,46 @@
+.button{
+    padding: 8px 12px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(25, 214, 57);
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .button:hover {background-color: #14be2b}
+  
+  
+
+
+  .button1 {
+    padding: 8px 12px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(214, 25, 41);
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .button1:hover {background-color: #e91f1f}
+  
+
+
+  
+  .qty{
+      width: 100px
+  }
+
+
+  .bigHr {
+    background-color: rgb(0, 0, 0) !important;
+    
+    border: solid 2px rgb(0, 0, 0) !important;
+    height: 0.25px !important;
+    width: 100% !important;
+}
